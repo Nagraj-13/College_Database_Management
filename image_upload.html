@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload to Google Gemini API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+        }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form id="imageUploadForm">
+        <input type="file" id="image" accept="image/*" required />
+        <button type="submit">Upload Image</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('imageUploadForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData();
+            const imageFile = document.getElementById('image').files[0];
+            formData.append('image', imageFile);
+        
+            const response = await fetch('http://localhost:5000/api/v1/user/upload-image', {
+                method: 'POST',
+                body: formData,
+            });
+            const result = await response.json();
+            console.log(result)
+            document.getElementById('result').innerText = JSON.stringify(result, null, 2);
+        });
+        
+    </script>
+</body>
+</html>
