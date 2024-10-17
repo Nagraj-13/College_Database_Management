@@ -11,24 +11,35 @@ const subjectSchema = new mongoose.Schema({
     },
     subCredits : {
         type : Number,
-        required : true
+        required : true,
+        min: 1, 
+        max: 10 
     },
     marks: {
         type: Number,
+        min: 0,
+        max: 100
     },
-})
+    result: {
+        type: String,
+        enum: ['pass', 'fail']
+    }
+});
 
 const semesterSchema = new mongoose.Schema({
     sem: {
-        type:String,
+        type: String,
     },
     subjects: [{
         type: subjectSchema
     }],
     sgpa: {
-        type: Number
+        type: Number,
+        min: 0,
+        max: 10
     }
-})
+});
+
 const academicSchema = new mongoose.Schema({
     branchName: {
         type: String,
@@ -38,8 +49,10 @@ const academicSchema = new mongoose.Schema({
         type: semesterSchema
     }],
     cgpa: {
-        type: Number
+        type: Number,
+        min: 0,
+        max: 10
     }
-})
+});
 
 export const Academics = mongoose.model('Academics', academicSchema);

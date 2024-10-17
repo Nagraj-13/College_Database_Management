@@ -69,6 +69,7 @@ export const registerUser = asynchHandler(async (req, res) => {
                     subName: subject.subName,
                     subCode: subject.subCode,
                     subCredits: subject.subCredits,
+                    result: 'pass',
                     marks: 0
                 })),
                 sgpa: 0

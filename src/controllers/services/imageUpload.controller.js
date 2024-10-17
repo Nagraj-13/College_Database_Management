@@ -1,50 +1,34 @@
-import multer from 'multer';
-import { GoogleAIFileManager } from "@google/generative-ai/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
-import path from 'path';
-import fs from 'fs';
+import processImage from '../../utils/imageUpload.js';
+import uploadImage from '../../config/multer.config.js';
+import asyncHandler from 'express-async-handler';
+import responseHandler from '../../utils/responseHandler.js';
 
-const upload = multer({ dest: 'uploads/' });
-const fileManager = new GoogleAIFileManager(process.env.API_KEY);
-const genAI = new GoogleGenerativeAI(process.env.API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-const uploadImage = upload.single('image');
-
-const processImage = async (req, res) => {
+export const imageUploadController = asyncHandler(async (req, res) => {
     try {
         if (!req.file) {
-            console.log(req.file)
-            return res.status(400).json({ error: 'No file uploaded' });
+            return responseHandler(res, {
+                success: false,
+                statusCode: 400,
+                msg: 'No file uploaded',
+            });
         }
-
-    
-        const uploadResult = await fileManager.uploadFile(req.file.path, {
-            mimeType: req.file.mimetype,
-            displayName: req.file.originalname,
+        const processedData = await processImage(req.file);
+        console.log(processedData)
+        return responseHandler(res, {
+            success: true,
+            statusCode: 200,
+            msg: 'Image processed successfully',
+            payload: { processedData },
         });
 
-        const result = await model.generateContent([
-            "Tell me about this image.",
-            {
-                fileData: {
-                    fileUri: uploadResult.file.uri,
-                    mimeType: uploadResult.file.mimeType,
-                },
-            },
-        ]);
-
-    
-        fs.unlinkSync(req.file.path);
-
-   
-        console.log(result.response.text())
-        res.json({ message: 'Image processed successfully', data: result.response.text() });
     } catch (error) {
-        console.error('Error processing image:', error);
-        res.status(500).json({ error: 'Failed to process image' });
+        console.error(`controllers/imageController.js: Error: ${error}`);
+        return responseHandler(res, {
+            success: false,
+            statusCode: 500,
+            msg: `Image processing failed: ${error.message}`,
+        });
     }
-};
+});
 
-
-export { uploadImage, processImage };
+export { uploadImage };

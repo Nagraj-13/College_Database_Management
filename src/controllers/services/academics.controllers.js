@@ -17,6 +17,13 @@ export const getUserDetails = asyncHandler(async (req, res) => {
         }
         const academicDetails =await Academics.findById(user.academics)
         console.log(academicDetails)
+        if (!academicDetails) {
+            return responseHandler(res, {
+                success: false,
+                statusCode: 404,
+                msg: 'Academic details not found',
+            });
+        }
         return responseHandler(res, {
             success: true,
             statusCode: 200,
