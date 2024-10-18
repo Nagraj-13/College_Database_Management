@@ -1,0 +1,986 @@
+{
+    "scheme": "2021",
+    "branches": [
+      {
+        "branchName": "Computer Science and Engineering",
+        "semesters": [
+          {
+            "sem": "1 Physics Cycle",
+            "subjects": [
+                {
+                    "subName": "Calculus & Differential Equations",
+                    "subCode": "21MAT11",
+                    "subCredits": 3
+                  },
+                  {
+                    "subName": "Basic Electrical Engineering",
+                    "subCode": "21ELE13",
+                    "subCredits": 3
+                  },
+                  {
+                    "subName": "Elements of Civil Engineering and Mechanics",
+                    "subCode": "21CIV14",
+                    "subCredits": 3
+                  },
+                  {
+                    "subName": "Engineering Visualization",
+                    "subCode": "21EVN15",
+                    "subCredits": 3
+                  },
+                  {
+                    "subName": "Engineering Physics Laboratory",
+                    "subCode": "21PHYL16",
+                    "subCredits": 1
+                  },
+                  {
+                    "subName": "Basic Electrical Engineering Laboratory",
+                    "subCode": "21ELEL17",
+                    "subCredits": 1
+                  },
+                  {
+                    "subName": "Communicative English",
+                    "subCode": "21EGH18",
+                    "subCredits": 2
+                  },
+                  {
+                    "subName": "Innovation and Design Thinking",
+                    "subCode": "21IDT19/29",
+                    "subCredits": 1
+                  },
+                  {
+                    "subName": "Scientific Foundations of Health",
+                    "subCode": "21SFH19/29",
+                    "subCredits": 1
+                  }
+            ]
+          },
+          {
+            "sem" : "2 Chemistry Cycle",
+            "subjects": [
+                {
+                  "subName": "Advanced Calculus and Numerical Methods",
+                  "subCode": "21MAT21",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Problem-Solving through Programming",
+                  "subCode": "21PPE22",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Basic Electronics & Communication Engineering",
+                  "subCode": "21ELN24",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Elements of Mechanical Engineering",
+                  "subCode": "21EME25",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Engineering Chemistry Laboratory",
+                  "subCode": "21CHEL26",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Computer Programming Laboratory",
+                  "subCode": "21CPL27",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Professional Writing Skills in English",
+                  "subCode": "21EGH28",
+                  "subCredits": 2
+                },
+                {
+                  "subName": "Scientific Foundations of Health",
+                  "subCode": "21SFH19/29",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Innovation and Design Thinking",
+                  "subCode": "21IDT19/29",
+                  "subCredits": 1
+                }
+              ]
+          },
+          {
+            "sem" : "1 Chemistry Cycle",
+            "subjects": [
+                {
+                  "subName": "Calculus & Differential Equations",
+                  "subCode": "21MAT11",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Engineering Chemistry",
+                  "subCode": "21CHE12",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Problem-Solving through Programming",
+                  "subCode": "21PSP13",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Basic Electronics & Communication Engineering",
+                  "subCode": "21ELN14",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Elements of Mechanical Engineering",
+                  "subCode": "21EME15",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Engineering Chemistry Laboratory",
+                  "subCode": "21CHEL16",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Computer Programming Laboratory",
+                  "subCode": "21CPL17",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Communicative English",
+                  "subCode": "21EGH18",
+                  "subCredits": 2
+                },
+                {
+                  "subName": "Innovation and Design Thinking",
+                  "subCode": "21IDT19/29",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Scientific Foundations of Health",
+                  "subCode": "21SFH19/29",
+                  "subCredits": 1
+                }
+              ]
+          },
+          {
+            "sem" : "2 Physics Cycle",
+            "subjects":[
+                {
+                  "subName": "Advanced Calculus and Numerical Methods",
+                  "subCode": "21MAT21",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Engineering Physics",
+                  "subCode": "21PHY22",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Basic Electrical Engineering",
+                  "subCode": "21ELE23",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Elements of Civil Engineering and Mechanics",
+                  "subCode": "21CIV24",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Engineering Visualization",
+                  "subCode": "21EVN25",
+                  "subCredits": 3
+                },
+                {
+                  "subName": "Engineering Physics Laboratory",
+                  "subCode": "21PHYL26",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Basic Electrical Engineering Laboratory",
+                  "subCode": "21ELEL27",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Professional Writing Skills in English",
+                  "subCode": "21EGH28",
+                  "subCredits": 2
+                },
+                {
+                  "subName": "Scientific Foundations of Health",
+                  "subCode": "21SFH19/29",
+                  "subCredits": 1
+                },
+                {
+                  "subName": "Innovation and Design Thinking",
+                  "subCode": "21IDT19/29",
+                  "subCredits": 1
+                }
+              ]
+          },
+          {
+            "sem" : "3",
+            "subjects":[
+                {
+                    "subName": "Transform Calculus, Fourier Series and Numerical Techniques",
+                    "subCode": "BSC21MAT31",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Data Structures and Applications",
+                    "subCode": "IPCC21CS32",
+                    "subCredits": 4
+                },
+                {
+                    "subName": "Analog and Digital Electronics",
+                    "subCode": "IPCC21CS33",
+                    "subCredits": 4
+                },
+                {
+                    "subName": "Computer Organization and Architecture",
+                    "subCode": "PCC21CS34",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Object Oriented Programming with JAVA Laboratory",
+                    "subCode": "PCC21CSL35",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Social Connect and Responsibility",
+                    "subCode": "UHV21UH36",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Samskrutika Kannada",
+                    "subCode": "HSMC21KSK37/47",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Balake Kannada",
+                    "subCode": "HSMC21KBK37/47",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Constitution of India and Professional Ethics",
+                    "subCode": "HSMC21CIP37/47",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Ability Enhancement Course - III",
+                    "subCode": "AEC21CS38X/21CSL38X",
+                    "subCredits": 1
+                }
+            ]
+          },
+          {
+            "sem" : "4",
+            "subjects": [
+                {
+                    "subName": "Mathematical Foundations for Computing",
+                    "subCode": "BSC21CS41",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Design and Analysis of Algorithms",
+                    "subCode": "IPCC21CS42",
+                    "subCredits": 4
+                },
+                {
+                    "subName": "Microcontroller and Embedded Systems",
+                    "subCode": "IPCC21CS43",
+                    "subCredits": 4
+                },
+                {
+                    "subName": "Operating Systems",
+                    "subCode": "PCC21CS44",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Biology For Engineers",
+                    "subCode": "AEC21BE45",
+                    "subCredits": 2
+                },
+                {
+                    "subName": "Python Programming Laboratory",
+                    "subCode": "PCC21CSL46",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Samskrutika Kannada",
+                    "subCode": "HSMC21KSK37/47",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Balake Kannada",
+                    "subCode": "HSMC21KBK37/47",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Constitution of India & Professional Ethics",
+                    "subCode": "HSMC21CIP37/47",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Ability Enhancement Course-IV",
+                    "subCode": "AEC21CS48X/21CSL48X",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Universal HumanValues",
+                    "subCode": "UHV21UH49",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Inter/Intra Institutional Internship",
+                    "subCode": "INT21INT49",
+                    "subCredits": 2
+                }
+            ]
+          },
+          {
+            "sem" : 5,
+            "subjects":[
+                {
+                    "subName": "Automata Theory and Compiler Design",
+                    "subCode": "BSC21CS51",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Computer Networks",
+                    "subCode": "IPCC21CS52",
+                    "subCredits": 4
+                },
+                {
+                    "subName": "Database Management Systems",
+                    "subCode": "PCC21CS53",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Artificial Intelligence and Machine Learning",
+                    "subCode": "PCC21CS54",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Database Management Systems Laboratory with Mini Project",
+                    "subCode": "PCC21CSL55",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Research Methodology & Intellectual Property Rights",
+                    "subCode": "AEC21XX56",
+                    "subCredits": 2
+                },
+                {
+                    "subName": "Environmental Studies",
+                    "subCode": "HSMC21CIV57",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Ability Enhancement Course-V",
+                    "subCode": "AEC21CS58X/21CS58LX",
+                    "subCredits": 1
+                }
+            ]
+          },
+          {
+            "sem":"6",
+            "subjects": [
+                {
+                    "subName": "Software Engineering & Project Management",
+                    "subCode": "HSMC21CS61",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Fullstack Development",
+                    "subCode": "IPCC21CS62",
+                    "subCredits": 4
+                },
+                {
+                    "subName": "Computer Graphics and Fundamentals of Image Processing",
+                    "subCode": "PCC21CS63",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Professional Elective Course-I",
+                    "subCode": "PEC21XX64X",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Open Elective Course-I",
+                    "subCode": "OEC21XX65X",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Computer Graphics and Image Processing Laboratory",
+                    "subCode": "PCC21CSL66",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Mini Project",
+                    "subCode": "MP21CSMP67",
+                    "subCredits": 2
+                },
+                {
+                    "subName": "Innovation/Entrepreneurship /Societal Internship",
+                    "subCode": "INT21INT68",
+                    "subCredits": 3
+                }
+            ]
+          },
+          {
+            "sem": "7",
+            "subjects":[
+                {
+                    "subName": "Big Data Analytics",
+                    "subCode": "PCC21CS71",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Cloud Computing",
+                    "subCode": "PCC21CS72",
+                    "subCredits": 2
+                },
+                {
+                    "subName": "Professional elective Course-II",
+                    "subCode": "PEC21XX73X",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Professional elective Course-III",
+                    "subCode": "PEC21XX74X",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Open elective Course-II",
+                    "subCode": "OEC21XX75X",
+                    "subCredits": 3
+                },
+                {
+                    "subName": "Project work",
+                    "subCode": "PROJECT21CSP76",
+                    "subCredits": 10
+                }
+            ]
+          },
+          {
+            "sem":"8",
+            "subjects":[
+                {
+                    "subName": "Technical Seminar",
+                    "subCode": "21CS81",
+                    "subCredits": 1
+                },
+                {
+                    "subName": "Research Internship/Industry Internship",
+                    "subCode": "21INT82",
+                    "subCredits": 15
+                },
+                {
+                    "subName": "National Service Scheme (NSS)",
+                    "subCode": "21NS83",
+                    "subCredits": 0
+                },
+                {
+                    "subName": "Physical Education (PE) (Sports and Athletics)",
+                    "subCode": "21PE83",
+                    "subCredits": 0
+                },
+                {
+                    "subName": "Yoga",
+                    "subCode": "21Y083",
+                    "subCredits": 0
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "branchName": "Electronics and Communication Engineering",
+        "semesters": [
+            {
+                "sem": "1 Physics Cycle",
+                "subjects": [
+                    {
+                        "subName": "Calculus & Differential Equations",
+                        "subCode": "21MAT11",
+                        "subCredits": 3
+                      },
+                      {
+                        "subName": "Basic Electrical Engineering",
+                        "subCode": "21ELE13",
+                        "subCredits": 3
+                      },
+                      {
+                        "subName": "Elements of Civil Engineering and Mechanics",
+                        "subCode": "21CIV14",
+                        "subCredits": 3
+                      },
+                      {
+                        "subName": "Engineering Visualization",
+                        "subCode": "21EVN15",
+                        "subCredits": 3
+                      },
+                      {
+                        "subName": "Engineering Physics Laboratory",
+                        "subCode": "21PHYL16",
+                        "subCredits": 1
+                      },
+                      {
+                        "subName": "Basic Electrical Engineering Laboratory",
+                        "subCode": "21ELEL17",
+                        "subCredits": 1
+                      },
+                      {
+                        "subName": "Communicative English",
+                        "subCode": "21EGH18",
+                        "subCredits": 2
+                      },
+                      {
+                        "subName": "Innovation and Design Thinking",
+                        "subCode": "21IDT19/29",
+                        "subCredits": 1
+                      },
+                      {
+                        "subName": "Scientific Foundations of Health",
+                        "subCode": "21SFH19/29",
+                        "subCredits": 1
+                      }
+                ]
+              },
+              {
+                "sem" : "2 Chemistry Cycle",
+                "subjects": [
+                    {
+                      "subName": "Advanced Calculus and Numerical Methods",
+                      "subCode": "21MAT21",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Problem-Solving through Programming",
+                      "subCode": "21PPE22",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Basic Electronics & Communication Engineering",
+                      "subCode": "21ELN24",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Elements of Mechanical Engineering",
+                      "subCode": "21EME25",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Engineering Chemistry Laboratory",
+                      "subCode": "21CHEL26",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Computer Programming Laboratory",
+                      "subCode": "21CPL27",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Professional Writing Skills in English",
+                      "subCode": "21EGH28",
+                      "subCredits": 2
+                    },
+                    {
+                      "subName": "Scientific Foundations of Health",
+                      "subCode": "21SFH19/29",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Innovation and Design Thinking",
+                      "subCode": "21IDT19/29",
+                      "subCredits": 1
+                    }
+                  ]
+              },
+              {
+                "sem" : "1 Chemistry Cycle",
+                "subjects": [
+                    {
+                      "subName": "Calculus & Differential Equations",
+                      "subCode": "21MAT11",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Engineering Chemistry",
+                      "subCode": "21CHE12",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Problem-Solving through Programming",
+                      "subCode": "21PSP13",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Basic Electronics & Communication Engineering",
+                      "subCode": "21ELN14",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Elements of Mechanical Engineering",
+                      "subCode": "21EME15",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Engineering Chemistry Laboratory",
+                      "subCode": "21CHEL16",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Computer Programming Laboratory",
+                      "subCode": "21CPL17",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Communicative English",
+                      "subCode": "21EGH18",
+                      "subCredits": 2
+                    },
+                    {
+                      "subName": "Innovation and Design Thinking",
+                      "subCode": "21IDT19/29",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Scientific Foundations of Health",
+                      "subCode": "21SFH19/29",
+                      "subCredits": 1
+                    }
+                  ]
+              },
+              {
+                "sem" : "2 Physics Cycle",
+                "subjects":[
+                    {
+                      "subName": "Advanced Calculus and Numerical Methods",
+                      "subCode": "21MAT21",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Engineering Physics",
+                      "subCode": "21PHY22",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Basic Electrical Engineering",
+                      "subCode": "21ELE23",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Elements of Civil Engineering and Mechanics",
+                      "subCode": "21CIV24",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Engineering Visualization",
+                      "subCode": "21EVN25",
+                      "subCredits": 3
+                    },
+                    {
+                      "subName": "Engineering Physics Laboratory",
+                      "subCode": "21PHYL26",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Basic Electrical Engineering Laboratory",
+                      "subCode": "21ELEL27",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Professional Writing Skills in English",
+                      "subCode": "21EGH28",
+                      "subCredits": 2
+                    },
+                    {
+                      "subName": "Scientific Foundations of Health",
+                      "subCode": "21SFH19/29",
+                      "subCredits": 1
+                    },
+                    {
+                      "subName": "Innovation and Design Thinking",
+                      "subCode": "21IDT19/29",
+                      "subCredits": 1
+                    }
+                  ]
+              },
+              {
+                "sem":"3",
+                "subjects": [
+                    {
+                        "subName": "Mathematics Course (Common to all)",
+                        "subCode": "BSC21MAT31",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Digital System Design using Verilog",
+                        "subCode": "IPCC21EC32",
+                        "subCredits": 4
+                    },
+                    {
+                        "subName": "Basic Signal Processing",
+                        "subCode": "IPCC21EC33",
+                        "subCredits": 4
+                    },
+                    {
+                        "subName": "Analog Electronic Circuits",
+                        "subCode": "PCC21EC34",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Analog and Digital Electronics Lab",
+                        "subCode": "PCC21ECL35",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Social Connect and Responsibility",
+                        "subCode": "UHV21UH36",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Samskrutika Kannada",
+                        "subCode": "HSMC21KSK37/47",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Balake Kannada",
+                        "subCode": "HSMC21KBK37/47",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Constitution of India and Professional Ethics",
+                        "subCode": "HSMC21CIP37/47",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Ability Enhancement Course - III",
+                        "subCode": "AEC21EC38X",
+                        "subCredits": 1
+                    }
+                ]
+              },
+              {
+                "sem":"4",
+                "subjects":[
+                    {
+                        "subName": "Maths for Communication Engineers",
+                        "subCode": "BSC21EC41",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Digital Signal Processing",
+                        "subCode": "IPCC21EC42",
+                        "subCredits": 4
+                    },
+                    {
+                        "subName": "Circuits & Controls",
+                        "subCode": "IPCC21EC43",
+                        "subCredits": 4
+                    },
+                    {
+                        "subName": "Communication Theory",
+                        "subCode": "PCC21EC44",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Biology For Engineers",
+                        "subCode": "AEC21BE45",
+                        "subCredits": 2
+                    },
+                    {
+                        "subName": "Communication Laboratory I",
+                        "subCode": "PCC21ECL46",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Samskrutika Kannada",
+                        "subCode": "HSMC21KSK37/47",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Balake Kannada",
+                        "subCode": "HSMC21KBK37/47",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Constitution of India & Professional Ethics",
+                        "subCode": "HSMC21CIP37/47",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Ability Enhancement Course-IV",
+                        "subCode": "AEC21EC48X",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Universal Human Values",
+                        "subCode": "UHV21UH49",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Inter/Intra Institutional Internship",
+                        "subCode": "INT21INT49",
+                        "subCredits": 2
+                    }
+                ]
+              },
+              {
+                "sem":"5",
+                "subjects":[
+                    {
+                        "subName": "Digital Communication",
+                        "subCode": "BSC21EC51",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Computer Organization & ARM Microcontroller",
+                        "subCode": "IPCC21EC52",
+                        "subCredits": 4
+                    },
+                    {
+                        "subName": "Computer Communication Networks",
+                        "subCode": "PCC21EC53",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Electromagnetics Waves",
+                        "subCode": "PCC21EC54",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Communication Lab II",
+                        "subCode": "PCC21ECL55",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Research Methodology & Intellectual Property Rights",
+                        "subCode": "AEC21EC56",
+                        "subCredits": 2
+                    },
+                    {
+                        "subName": "Environmental Studies",
+                        "subCode": "HSMC21CIV57",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Ability Enhancement Course-V",
+                        "subCode": "AEC21EC58X",
+                        "subCredits": 1
+                    }
+                ]
+              },
+              {
+                "sem":"6",
+                "subjects":[
+                    {
+                        "subName": "Technological Innovation Management and Entrepreneurship",
+                        "subCode": "HSMC21EC61",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Microwave Theory & Antennas",
+                        "subCode": "IPCC21EC62",
+                        "subCredits": 4
+                    },
+                    {
+                        "subName": "VLSI Design & Testing",
+                        "subCode": "PCC21EC63",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Professional Elective Course-I",
+                        "subCode": "OEC21EC64X",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Open Elective Course-I",
+                        "subCode": "OEC21EC65X",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "VLSI Laboratory",
+                        "subCode": "PCC21ECL66",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Mini Project",
+                        "subCode": "MP21ECMP67",
+                        "subCredits": 2
+                    },
+                    {
+                        "subName": "Innovation/Entrepreneurship /Societal Internship",
+                        "subCode": "INT21INT68",
+                        "subCredits": 3
+                    }
+                ]
+              },
+              {
+                "sem":"7",
+                "subjects":[
+                    {
+                        "subName": "Advanced VLSI",
+                        "subCode": "PCC21EC71",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Optical & Wireless Communication",
+                        "subCode": "PCC21EC72",
+                        "subCredits": 2
+                    },
+                    {
+                        "subName": "Professional elective Course-II",
+                        "subCode": "PEC21EC73X",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Professional elective Course-III",
+                        "subCode": "PEC21EC74X",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Open elective Course-II",
+                        "subCode": "OEC21EC75X",
+                        "subCredits": 3
+                    },
+                    {
+                        "subName": "Project work",
+                        "subCode": "PROJECT21EC76",
+                        "subCredits": 10
+                    }
+                ]
+              },
+              {
+                "sem":"8",
+                "subjects":[
+                    {
+                        "subName": "Technical Seminar",
+                        "subCode": "21EC81",
+                        "subCredits": 1
+                    },
+                    {
+                        "subName": "Research Internship/Industry Internship",
+                        "subCode": "21INT82",
+                        "subCredits": 15
+                    },
+                    {
+                        "subName": "National Service Scheme (NSS)",
+                        "subCode": "21NS83",
+                        "subCredits": 0
+                    },
+                    {
+                        "subName": "Physical Education (PE) (Sports and Athletics)",
+                        "subCode": "21PE83",
+                        "subCredits": 0
+                    },
+                    {
+                        "subName": "Yoga",
+                        "subCode": "21Y083",
+                        "subCredits": 0
+                    }
+                ]
+              }
+        ]
+      }
+    ]
+  }
+  

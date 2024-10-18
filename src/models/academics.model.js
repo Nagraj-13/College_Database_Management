@@ -12,8 +12,6 @@ const subjectSchema = new mongoose.Schema({
     subCredits : {
         type : Number,
         required : true,
-        min: 1, 
-        max: 10 
     },
     marks: {
         type: Number,
