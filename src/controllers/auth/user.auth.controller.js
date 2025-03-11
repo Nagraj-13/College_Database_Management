@@ -1,10 +1,10 @@
-import asynchHandler from 'express-async-handler';
-import bcrypt from 'bcryptjs';
-import responseHandler from '../../utils/responseHandler.js';
+import asynchHandler from "express-async-handler";
+import bcrypt from "bcryptjs";
+import responseHandler from "../../utils/responseHandler.js";
 import { User } from "../../models/user.model.js";
-import { Scheme } from '../../models/scheme.model.js';
-import { Academics } from '../../models/academics.model.js';
-import { generateToken } from '../../utils/generateToken.js';
+import { Scheme } from "../../models/scheme.model.js";
+import { Academics } from "../../models/academics.model.js";
+import { generateToken } from "../../utils/generateToken.js";
 
 const colors = {
     reset: "\x1b[0m",
@@ -19,7 +19,9 @@ export const registerUser = asynchHandler(async (req, res) => {
         const { name, email, usn, password, branch, scheme } = req.body;
 
         if (!name || !email || !usn || !password || !scheme || !branch) {
-            throw new Error(`${colors.red}controllers/auth/user.auth : Please fill in all fields${colors.reset}`);
+            throw new Error(
+                `${colors.red}controllers/auth/user.auth : Please fill in all fields${colors.reset}`
+            );
         }
 
         console.log(`${colors.blue}controllers/auth/user.auth :${colors.reset}`, req.body);
@@ -32,49 +34,60 @@ export const registerUser = asynchHandler(async (req, res) => {
             return responseHandler(res, {
                 success: false,
                 statusCode: 400,
-                message: 'Email or USN already exists',
-                error: 'User Already Exists!!!'
+                message: "Email or USN already exists",
+                error: "User Already Exists!!!",
             });
         }
 
         const selectedScheme = await Scheme.findOne({ scheme });
-        console.log(`${colors.blue}controllers/auth/user.auth : selected scheme ${colors.reset}`, selectedScheme ? selectedScheme.scheme : 'Not Found');
+        console.log(
+            `${colors.blue}controllers/auth/user.auth : selected scheme ${colors.reset}`,
+            selectedScheme ? selectedScheme.scheme : "Not Found"
+        );
 
         if (!selectedScheme) {
             return responseHandler(res, {
                 success: false,
                 statusCode: 404,
-                msg: 'No matching scheme or branch found',
+                msg: "No matching scheme or branch found",
             });
         }
 
-        const branchData = selectedScheme.branches.find(b => b.branchName === branch);
-        console.log(`${colors.blue}controllers/auth/user.auth : Branch : ${colors.reset}`, branchData ? branchData.branchName : 'Not Found');
+        const branchData = selectedScheme.branches.find((b) => b.branchName === branch);
+        console.log(
+            `${colors.blue}controllers/auth/user.auth : Branch : ${colors.reset}`,
+            branchData ? branchData.branchName : "Not Found"
+        );
 
         if (!branchData) {
             return responseHandler(res, {
                 success: false,
                 statusCode: 404,
-                msg: 'Branch not found in selected scheme',
+                msg: "Branch not found in selected scheme",
             });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
+        const academicSemesters = branchData.semesters.map((semester) => ({
+            sem: semester.sem,
+            subjects: semester.subjects.map((subject) => ({
+                subName: subject.subName,
+                subCode: subject.subCode,
+                subCredits: subject.subCredits,
+                internalMarks: 0,
+                externalMarks: 0,
+                marks: 0,
+                result: "p", 
+            })),
+            sgpa: 0, 
+        }));
+
         const newAcademicData = new Academics({
             branchName: branchData.branchName,
-            semesters: branchData.semesters.map(semester => ({
-                sem: semester.sem,
-                subjects: semester.subjects.map(subject => ({
-                    subName: subject.subName,
-                    subCode: subject.subCode,
-                    subCredits: subject.subCredits,
-                    result: 'pass',
-                    marks: 0
-                })),
-                sgpa: 0
-            })),
-            cgpa: 0
+            schemeName: selectedScheme.scheme,
+            semesters: academicSemesters,
+            cgpa: 0, // Default CGPA
         });
 
         console.log(`${colors.green}controllers/auth/user.auth : Saving new academic data...${colors.reset}`);
@@ -88,7 +101,7 @@ export const registerUser = asynchHandler(async (req, res) => {
             password: hashedPassword,
             branch,
             scheme,
-            academics: academicsData._id  
+            academics: academicsData._id,
         });
 
         const userData = await user.save();
@@ -98,12 +111,17 @@ export const registerUser = asynchHandler(async (req, res) => {
         return responseHandler(res, {
             success: true,
             statusCode: 200,
-            msg: 'User created successfully',
+            msg: "User created successfully",
             payload: { userData, academicsData, token },
         });
-
     } catch (err) {
         console.log(`${colors.red}controllers/auth/user.auth : catch Block : ${err}${colors.reset}`);
+        return responseHandler(res, {
+            success: false,
+            statusCode: 500,
+            msg: "Internal Server Error",
+            error: err.message,
+        });
     }
 });
 

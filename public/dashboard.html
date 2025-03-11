@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script> -->
+</head>
+<body class="min-h-screen bg-gray-100">
+  <nav class="bg-blue-600 text-white shadow-md">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <h1 class="text-2xl font-bold">Dashboard</h1>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="#home" class="flex items-center hover:text-blue-200 transition-colors duration-200">
+              <i data-lucide="home" class="w-5 h-5"></i>
+              <span class="ml-1">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#academics" class="flex items-center hover:text-blue-200 transition-colors duration-200">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              <span class="ml-1">Academics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#profile" class="flex items-center hover:text-blue-200 transition-colors duration-200">
+              <i data-lucide="user" class="w-5 h-5"></i>
+              <span class="ml-1">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#logout" class="flex items-center hover:text-blue-200 transition-colors duration-200">
+              <i data-lucide="log-out" class="w-5 h-5"></i>
+              <span class="ml-1">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6">Welcome, <span id="userName">User</span></h2>
+    <section id="academics" class="mb-8">
+      <!-- Inside the main section, just before the </main> tag -->
+<div id="updateSubjectContainer" class="hidden">
+  <h3 class="text-xl font-semibold mb-4">Update Subject</h3>
+  <form id="updateSubjectForm" class="space-y-4">
+    <div>
+      <label for="subjectCode" class="block">Subject Code</label>
+      <input type="text" id="subjectCode" class="border rounded p-2 w-full" required>
+    </div>
+    <div>
+      <label for="subjectName" class="block">Subject Name</label>
+      <input type="text" id="subjectName" class="border rounded p-2 w-full" required>
+    </div>
+    <div>
+      <label for="subjectCredits" class="block">Credits</label>
+      <input type="number" id="subjectCredits" class="border rounded p-2 w-full" required>
+    </div>
+    <div>
+      <label for="semester" class="block">Semester</label>
+      <input type="number" id="semester" class="border rounded p-2 w-full" required>
+    </div>
+    <div>
+      <label for="marks" class="block">Marks</label>
+      <input type="number" id="marks" class="border rounded p-2 w-full" required>
+    </div>
+    <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded">Update Subject</button>
+  </form>
+</div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

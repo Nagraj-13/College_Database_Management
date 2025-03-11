@@ -13,6 +13,18 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
+        #semesterDropdown {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            color: #555;
+            cursor: pointer;
+        }
 
         .upload-container {
             background-color: white;
@@ -63,6 +75,20 @@
 </head>
 <body>
     <div class="upload-container">
+        <label for="semesterDropdown">Select Semester:</label>
+        <select id="semesterDropdown">
+            <option value="" disabled selected>Select semester</option>
+            <option value="1 Physics Cycle">1 Physics Cycle</option>
+            <option value="2 Chemistry Cycle">2 Chemistry Cycle</option>
+            <option value="1 Chemistry Cycle">1 Chemistry Cycle</option>
+            <option value="2 Physics Cycle">2 Physics Cycle</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
         <h2>PDF to Image Uploader</h2>
         <div class="upload-area" id="dropZone">
             <p>Drag & Drop your PDF here or click to select</p>
@@ -125,74 +151,84 @@
             }
         });
 
+        const showStatus = (message, type) => {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;  // Assign success or error class
+            
+            if (message) {
+                status.style.display = 'block';
+            } else {
+                status.style.display = 'none';
+            }
+        };
+        
+
         async function handlePDFFile(file) {
             try {
                 showStatus('Processing PDF...', '');
+
+                // Get selected semester value
+                const semesterDropdown = document.getElementById('semesterDropdown');
+                const sem = semesterDropdown.value;
                 
-                // Load the PDF file
+                if (!sem) {
+                    showStatus('Please select a semester before uploading.', 'error');
+                    return;
+                }
+
+                // Load PDF and proceed as previously defined
                 const arrayBuffer = await file.arrayBuffer();
                 const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;
-                
-                // Get the first page
                 const page = await pdf.getPage(1);
                 
-                // Set scale and viewport
                 const scale = 1.5;
                 const viewport = page.getViewport({ scale });
-                
-                // Create canvas
+
                 const canvas = document.createElement('canvas');
                 const context = canvas.getContext('2d');
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
-                
-                // Render PDF page to canvas
-                await page.render({
-                    canvasContext: context,
-                    viewport: viewport
-                }).promise;
-                
-                // Convert canvas to blob
+
+                await page.render({ canvasContext: context, viewport: viewport }).promise;
+
                 const blob = await new Promise(resolve => {
                     canvas.toBlob(resolve, 'image/jpeg', 0.95);
                 });
-                
-                // Create file from blob with a proper name
+
                 const imageFile = new File([blob], 'page1.jpg', { type: 'image/jpeg' });
                 
-                // Create FormData and append the image
+                // Replace with actual userId and JWT token
+                let token = localStorage.getItem('jwtToken');
+                token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGJmMDBkNGNhYjUzZjc1YmIxZmMzNyIsImlhdCI6MTczMzAyOTkwMSwiZXhwIjoxNzM1NjIxOTAxfQ.wp5tHRU8IcGS61kyughGc9Hbo5tMe8NgMKSArwwq52Y";
+
                 const formData = new FormData();
                 formData.append('image', imageFile);
-                
-                // Upload image to server
+                formData.append('sem', sem);
+                formData.append('usn', '2JR21CS045' )
                 const response = await fetch('http://localhost:5000/api/v1/user/upload-image', {
                     method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    },
                     body: formData
                 });
-                
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.error || 'Upload failed');
-                }
-                
+
                 const responseData = await response.json();
-                console.log('Server response:', responseData);
-                
-                // Show preview
-                preview.src = URL.createObjectURL(blob);
-                preview.style.display = 'block';
-                
-                showStatus('First page successfully converted and uploaded!', 'success');
+
+                if (response.ok) {
+                    console.log('Server response:', responseData);
+                    showStatus('First page successfully converted and uploaded!', 'success');
+                    preview.src = URL.createObjectURL(blob);
+                    preview.style.display = 'block';
+                } else {
+                    console.log('Server response:', responseData);
+                    throw new Error(responseData.msg || 'Upload failed');
+                }
             } catch (error) {
                 console.error('Error details:', error);
                 showStatus('Error processing PDF: ' + error.message, 'error');
             }
-        }
-
-        function showStatus(message, type) {
-            status.textContent = message;
-            status.className = 'status ' + type;
-            status.style.display = 'block';
         }
     </script>
 </body>
